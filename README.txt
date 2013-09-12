@@ -1,7 +1,8 @@
 
 Ferret is a class path scanner for the Java platform. 
 
-Documentation is in the docs directory of the release zip file.
+Documentation is in the docs directory of the release zip file. You will find
+a full User Guide in the Javadocs.
 
 You can learn more about Ferret at http://pureperfect.com/open/ferret. 
 
