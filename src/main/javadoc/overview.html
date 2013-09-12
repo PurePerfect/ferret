@@ -6,18 +6,19 @@ pre {
 	padding: 1em 0 1em 0;
 }
 </style>
-
 	<ol>
-		<li><a href="#gettingStarted">About</a></li>
+		<li><a href="#about">About</a></li>
 		<li><a href="#gettingStarted">Getting Started</a></li>
 		<li><a href="#classpath">Classpath Scanning</a></li>
-		<li><a href="#war">Scanning in a web application</a></li>
-		<li><a href="#war">Scanning across the network</a></li>
-		<li><a href="#war">Dealing with archives</a></li>
-		<li><a href="#war">Using a Prefilter</a></li>
+		<li><a href="#war">Scanning in a Web Application</a></li>
+		<li><a href="#network">Scanning Across the Network</a></li>
+		<li><a href="#archives">Dealing with Archives</a></li>
+		<li><a href="#prefilter">Using a Prefilter</a></li>
 	</ol>
 
-	<h3 id="#about">About</h3>
+	<br />
+
+	<h3 id="about">About</h3>
 
 	Ferret is a class path scanning API for the Java platform. Unlike
 	previous class path scanning APIs, Ferret does not restrict scanning to
@@ -160,7 +161,7 @@ pre {
 		});
 	</pre>
 
-	<h3 id="network">Scanning across the network</h3>
+	<h3 id="network">Scanning Across the Network</h3>
 
 	Scanning across a network is the same as scanning a local file system.
 	As long as Java knows how to handle the URL through a registered
@@ -171,8 +172,8 @@ pre {
 		scanner.add(new URL("http://myserver/myjarfile.jar"));
 	</pre>
 
-	NOTE: Sometimes network resources are not available.
-	If a network path cannot be reached, an instance of
+	NOTE: Sometimes network resources are not available. If a network path
+	cannot be reached, an instance of
 	<code>ScanException</code>
 	will be thrown.
 
