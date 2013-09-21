@@ -9,84 +9,7 @@ import com.pureperfect.ferret.ScanException;
 
 /**
  * An implementation of a lightweight Virtual File System (VFS) appropriate for
- * scanning. The VFS is made up of {@link PathElement PathElements} representing
- * the resources on the underlying file system. The actual mapping from the real
- * resource to the VFS {@link PathElement} can be seen in the table below.
- * 
- * <style> .mytable { border: 1px solid black; border-collapse: collapse;
- * text-align: center; } </style>
- * 
- * <table class="mytable" style="width: 50%;">
- * <tr>
- * <th class="mytable">Actual Resource</th>
- * <th class="mytable">VFS Type</th>
- * </tr>
- * <tr>
- * <td class="mytable">A directory on the local file system</td>
- * <td class="mytable">{@link Directory}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A file on the local file system</td>
- * <td class="mytable">{@link File}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A ZIP file on the local file system</td>
- * <td class="mytable">{@link Archive}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A ZIP file on the network</td>
- * <td class="mytable">{@link Archive}</td>
- * </tr>
- * <td class="mytable">A JAR file on the local file system</td>
- * <td class="mytable">{@link Archive}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A JAR file on the network</td>
- * <td class="mytable">{@link Archive}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A generic file inside an archive</td>
- * <td class="mytable">{@link ArchiveEntry}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A Java&trade; class in a directory</td>
- * <td class="mytable">{@link ClassFile}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A Java&trade; class in an archive</td>
- * <td class="mytable">{@link ClassFile}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A Java&trade; class on the network</td>
- * <td class="mytable">{@link ClassFile}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A generic file on the network</td>
- * <td class="mytable">{@link File}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A generic file inside a web application (WAR)</td>
- * <td class="mytable">{@link WebFile}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A directory inside a web application (WAR)</td>
- * <td class="mytable">{@link WebDirectory}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A ZIP file inside a web application (WAR)</td>
- * <td class="mytable">{@link Archive}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A JAR file inside a web application (WAR)</td>
- * <td class="mytable">{@link Archive}</td>
- * </tr>
- * <tr>
- * <td class="mytable">A class file inside a web application (WAR)</td>
- * <td class="mytable">{@link ClassFile}</td>
- * </tr>
- * </table>
- * 
- * TODO finish documentation. TODO delay file creation?
+ * scanning on the local file system or across a network.
  * 
  * @author J. Chris Folsom
  * @version 1.0
@@ -97,6 +20,7 @@ public class FileSystem
 {
 	private static FileSystem singleton = new FileSystem();
 
+	//TODO delay file creation?
 	private FileSystem()
 	{
 		// singleton

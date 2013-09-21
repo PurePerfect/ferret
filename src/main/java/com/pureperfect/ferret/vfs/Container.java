@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * A container is a PathElement that contains other PathElements. This will either be an
+ * A container is a {@link PathElement} that contains other {@link PathElement}s. This will either be an
  * {@link Archive} or a {@link Directory}.
  * 
  * @author J. Chris Folsom
