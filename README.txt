@@ -1,9 +1,11 @@
+Ferret is a class path scanning API for the Java platform. Unlike previous
+class path scanning APIs, Ferret does not restrict scanning to only certain
+types or force developers to learn a complicated and constricting query
+language. Instead, Ferret applies the Visitor pattern to allow developers to
+quickly develop powerful filters that can scan for anything (e.g. properties
+files, xml, images, video, etc). Ferret even allows developers to modify files
+(including Java class files) on the fly. It can also scan for files and
+classes across the network.
 
-Ferret is a class path scanner for the Java platform. 
-
-Documentation is in the docs directory of the release zip file. You will find
-a full User Guide in the Javadocs.
-
-You can learn more about Ferret at http://pureperfect.com/open/ferret. 
-
-Any bugs, feature requests, or general questions should be sent to open@pureperfect.com.
+The fact that Ferret is lightweight, dynamic, fast and easy to use is just
+icing on the cake. ;-)
